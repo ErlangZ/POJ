@@ -35,7 +35,8 @@ int main() {
             double x, y;
             x = (b1*c2-b2*c1) / static_cast<double>(a1*b2-b1*a2);
             y = (a2*c1-a1*c2) / static_cast<double>(a1*b2-b1*a2);
-            printf("POINT %.2f %.2f\n", x, y);
+            //printf("POINT %.2f %.2f\n", x, y);
+            std::cout << "POINT " << std::fixed << std::setprecision(2) << x << " " << y << std::endl;
         }
     }
     std::cout << "END OF OUTPUT" << std::endl;
