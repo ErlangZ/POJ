@@ -23,7 +23,10 @@ int main() {
         //Check the lines
         int det = a1 * b2 - a2 * b1;
         if (det == 0) { // parallel or same-line
-            if (c1 * b2 == c2 * b1 && c1 * a2 == c2 * a1) {
+            int div1 = a1 * a1 + b1 * b2;
+            int div2 = a2 * a2 + b1 * b2;
+            // a1/a2 == b1/b2 == c1/c2;
+            if (c1*c1*div2 == c2*c2*div1) {
                 std::cout << "LINE" << std::endl;
             } else {
                 std::cout << "NONE" << std::endl;
