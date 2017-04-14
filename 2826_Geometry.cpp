@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <iostream>
 #include <cmath>
 #include <iomanip>
@@ -74,6 +75,8 @@ int main() {
                 result = 0.0;
             } else if (left(x, y, hx, hy, lx, ly) && hx >= lx) {
                 result = 0.0; 
+            } else if (!left(x, y, hx, hy, lx, ly) && hx <= lx) {
+                result = 0.0;
             } else if (fabs(hy - ly) < 1e-8) { //the hight board must on the right of the low board.
                 double width = hx - lx;
                 //std::cout << "width:" << width << " lx:" << lx << " x:" << x << std::endl;
@@ -90,7 +93,8 @@ int main() {
         } else {
             result = 0.0;
         }
-        std::cout << result << std::endl;
+        //std::cout << result << std::endl;
+        printf("%.2f\n",result+1e-8);
     }
     return 0;
 }
