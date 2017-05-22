@@ -1,3 +1,3 @@
 build:
-	g++ -g ./1018_Dp.cpp -o a
+	g++ -g ./1019_Sequence.cpp -o a
 	./a < ./input.data
